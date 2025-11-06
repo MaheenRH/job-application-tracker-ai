@@ -23,4 +23,4 @@ today = datetime.now().strftime("%Y-%m-%d")
 test_data = [today, "Test Company", "Test Role", "Script Connection Test"]
 sheet.append_row(test_data)
 
-print("✅ Successfully connected and added test row to Google Sheet!")
+print("Successfully connected and added test row to Google Sheet!")

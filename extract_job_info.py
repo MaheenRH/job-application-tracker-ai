@@ -9,9 +9,7 @@ import openai
 from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage
 
-# --------------------------------------------
-# Extract company, role, and source from email
-# --------------------------------------------
+
 def extract_job_info(subject, body, retries=3):
     """
     Use GPT to extract company, role, and source from email content.
@@ -51,7 +49,6 @@ def extract_job_info(subject, body, retries=3):
             role = data.get("role", "").strip()
             source = data.get("source", "").strip() or "Email"
 
-            # ✅ Skip incomplete or placeholder values
             if company and role and company.lower() != "n/a" and role.lower() != "n/a":
                 return company, role, source
             else:
@@ -63,7 +60,7 @@ def extract_job_info(subject, body, retries=3):
             time.sleep(wait)
 
         except Exception as e:
-            print(f"⚠️ GPT extraction failed: {e}")
+            print(f" GPT extraction failed: {e}")
             break
 
     return None, None, None

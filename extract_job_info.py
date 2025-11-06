@@ -1,6 +1,4 @@
-# ============================================
-# extract_job_info.py
-# ============================================
+
 import os
 import time
 import json
@@ -56,7 +54,7 @@ def extract_job_info(subject, body, retries=3):
 
         except openai.RateLimitError:
             wait = (attempt + 1) * 20
-            print(f"⏳ Rate limit hit. Waiting {wait}s before retry ({attempt+1}/{retries})...")
+            print(f"Rate limit hit. Waiting {wait}s before retry ({attempt+1}/{retries})...")
             time.sleep(wait)
 
         except Exception as e:

@@ -14,5 +14,5 @@ creds = ServiceCreds.from_service_account_file(SERVICE_PATH, scopes=scope)
 client = gspread.authorize(creds)
 sheet = client.open_by_key(SHEET_ID).worksheet("applications")
 
-sheet.append_row([datetime.now().strftime("%Y-%m-%d"), "✅ Test Company", "AI Engineer", "Direct Test", "99999"])
-print("✅ Successfully wrote test row to Google Sheet!")
+sheet.append_row([datetime.now().strftime("%Y-%m-%d"), " Test Company", "AI Engineer", "Direct Test", "99999"])
+print("Successfully wrote test row to Google Sheet!")

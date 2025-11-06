@@ -52,7 +52,6 @@ def get_gmail_service():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(GMAIL_CREDENTIALS_PATH, SCOPES)
-            # ✅ Properly indented local server auth
             creds = flow.run_local_server(port=0, prompt='consent')
 
         # Save new token for future runs
@@ -60,7 +59,7 @@ def get_gmail_service():
             token.write(creds.to_json())
 
     service = build("gmail", "v1", credentials=creds)
-    print("✅ Gmail connection established.")
+    print("Gmail connection established.")
     return service
 
 
@@ -149,14 +148,14 @@ def fetch_applications():
                 source,
                 msg_id
             ])
-            print(f"✅ Logged (pending batch): {company} — {role} ({source})")
+            print(f"Logged (pending batch): {company} — {role} ({source})")
         else:
-            print(f"⚠️ Skipping {msg_id}: incomplete extraction.")
+            print(f"Skipping {msg_id}: incomplete extraction.")
 
     # Batch update (faster + quota safe)
     if batch_rows:
         sheet.append_rows(batch_rows, value_input_option="RAW")
-        print(f"✅ Logged {len(batch_rows)} new rows to Google Sheet.")
+        print(f"Logged {len(batch_rows)} new rows to Google Sheet.")
     else:
         print("No new rows to add.")
 

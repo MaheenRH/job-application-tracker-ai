@@ -1,3 +1,9 @@
+### Why I Chose This Project
+
+While applying for jobs, I realized how difficult it was to keep track of every single application. I would apply on different platforms — LinkedIn, company websites, Indeed, etc. and each confirmation email would get buried in my Gmail inbox. I tried writing everything down manually in a spreadsheet, but it quickly became overwhelming and time-consuming.
+
+That’s when I decided to build something that could do this automatically for me. A small AI system that reads my Gmail, detects job application emails, extracts key information like company name, role, and source, and saves everything neatly into a Google Sheet — so I could focus on preparing for interviews instead of tracking applications.
+
 # 🧠 Job Application Tracker AI
 
 An intelligent Gmail + Google Sheets automation tool that tracks all your job applications automatically.

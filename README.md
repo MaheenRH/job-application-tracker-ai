@@ -1,4 +1,4 @@
-### Why I Chose This Project
+# Why I Chose This Project
 
 While applying for jobs, I realized how difficult it was to keep track of every single application. I would apply on different platforms — LinkedIn, company websites, Indeed, etc. and each confirmation email would get buried in my Gmail inbox. I tried writing everything down manually in a spreadsheet, but it quickly became overwhelming and time-consuming.
 

@@ -1,4 +1,66 @@
+# =====================================
+# 🔒 SECURITY: Secrets and Credentials
+# =====================================
 .env
+credentials.json
+token.json
 *.json
-gmail_log.txt
+*.key
+*.pem
+*.p12
+
+# =====================================
+# 🧠 Python cache / environment files
+# =====================================
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pklz
+*.db
+
+# =====================================
+# 📦 Virtual Environments
+# =====================================
+venv/
+env/
+.venv/
+.job_application/
+job_application/
+*.egg-info/
+.Python
+pip-log.txt
+
+# =====================================
+# 💻 IDE / Editor Config
+# =====================================
+.vscode/
+.idea/
+*.code-workspace
+
+# =====================================
+# 🪵 Logs and temp data
+# =====================================
+*.log
+gmail_log.txt
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# =====================================
+# 📁 Misc local stuff
+# =====================================
+# Mac / OS X
+.DS_Store
+.Trash
+.AppleDouble
+.Spotlight-V100
+._*
+# Jupyter/Colab
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+# Build / dist folders
+build/
+dist/

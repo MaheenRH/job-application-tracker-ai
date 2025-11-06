@@ -46,14 +46,19 @@ def get_gmail_service():
     creds = None
     if os.path.exists("token.json"):
         creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(GMAIL_CREDENTIALS_PATH, SCOPES)
-            creds = flow.run_console()
+            # ✅ Properly indented local server auth
+            creds = flow.run_local_server(port=0, prompt='consent')
+
+        # Save new token for future runs
         with open("token.json", "w") as token:
             token.write(creds.to_json())
+
     service = build("gmail", "v1", credentials=creds)
     print("✅ Gmail connection established.")
     return service
@@ -163,5 +168,3 @@ def fetch_applications():
 # --------------------------------------------
 if __name__ == "__main__":
     fetch_applications()
-
-

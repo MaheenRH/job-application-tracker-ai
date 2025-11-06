@@ -1,0 +1,9 @@
+pandas
+openpyxl
+gradio==4.44.0     # (optional, for UI later)
+langchain==0.3.0   # (optional, for AI agent features)
+openai             # (optional, for GPT-powered extraction)
+python-dotenv
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib

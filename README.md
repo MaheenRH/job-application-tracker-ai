@@ -34,6 +34,10 @@ This project fetches job-related emails from Gmail, extracts company and role in
 
 ---
 
+## 📊 Example Google Sheet Output
+
+<img width="1337" height="396" alt="Screenshot 2025-11-06 at 4 23 41 PM" src="https://github.com/user-attachments/assets/4e416168-659f-437d-aa66-ed2d7b2073de" />
+
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the repository

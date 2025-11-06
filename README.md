@@ -41,7 +41,7 @@ This project fetches job-related emails from Gmail, extracts company and role in
 git clone https://github.com/MaheenRH/job-application-tracker-ai.git
 cd job-application-tracker-ai
 
-2️⃣ Create and activate a virtual environment
+### 2️⃣ Create and activate a virtual environment
 conda create -n job_application python=3.10 -y
 conda activate job_application
 
